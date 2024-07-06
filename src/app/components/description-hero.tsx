@@ -2,9 +2,12 @@ import Image from "next/image";
 import "./description-hero.css";
 const DescriptionHero = () => {
   return (
-    <section className="flex flex-col lg:flex-row items-center lg:items-start lg:space-x-10 p-8 bg-transparent ">
-      <div className="lg:flex-1 flex flex-col gap-12">
-        <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-slate-50 bg-clip-text text-transparent">
+    <section
+      id="whoami"
+      className="flex flex-col lg:flex-row items-center lg:items-start lg:space-x-10 p-10 bg-transparent "
+    >
+      <div className="lg:flex-1 flex flex-col gap-20">
+        <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-slate-50 bg-clip-text text-transparent p-4">
           Hey, I&apos;m Houssam Habbat
         </h1>
         <p className="mb-4 text-3xl text-left">

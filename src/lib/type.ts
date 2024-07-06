@@ -11,3 +11,10 @@ export interface Experience {
   description: string;
   technologies: string[];
 }
+
+export interface ContactMeObject {
+  name: string;
+  subject: string;
+  email: string;
+  message: string;
+}
