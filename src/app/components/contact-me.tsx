@@ -15,6 +15,7 @@ import contactMeSchema, { ContactMeSchemaType } from "@/lib/validationSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SendHorizontal } from "lucide-react";
 import { useForm } from "react-hook-form";
+import { emailme } from "../action";
 const ContactMe = () => {
   const form = useForm<ContactMeSchemaType>({
     defaultValues: {
@@ -25,15 +26,14 @@ const ContactMe = () => {
     },
     resolver: zodResolver(contactMeSchema),
   });
-  function onSubmit(data: ContactMeSchemaType) {
-    console.log("data", data);
-    // toast({
-    //   title: "You submitted the following values:",
-    //   description: (
-    //     <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-    //       <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-    //     </pre>
-    //   ),
+  async function onSubmit(data: ContactMeSchemaType) {
+    console.log("with on submit--->", data);
+    await emailme(data);
+    // await fetch("/api/email", {
+    //   body: {
+    //     ...data,
+    //   },
+    //   method: "POST",
     // });
   }
 
@@ -47,6 +47,7 @@ const ContactMe = () => {
           onSubmit={form.handleSubmit(onSubmit, (error) => {
             console.log("error", error);
           })}
+          // action={emailme}
         >
           <div className="flex flex-col w-full items-center">
             <div className="grid grid-cols-1 gap-4 lg:gap-8 w-full max-w-2xl">
