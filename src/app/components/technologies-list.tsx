@@ -21,7 +21,7 @@ const TechnologiesList = ({ technologies }: { technologies: string[] }) => {
           {technologies.slice(0, 3).map((tech) => (
             <div
               key={tech}
-              className="rounded-md border px-4 py-3 font-mono text-sm"
+              className="rounded-md border px-4 py-1 font-mono text-base"
             >
               {tech}
             </div>
@@ -37,10 +37,10 @@ const TechnologiesList = ({ technologies }: { technologies: string[] }) => {
         )}
       </div>
       <CollapsibleContent className="flex flex-row flex-wrap gap-2">
-        {technologies.map((tech, index) => (
+        {technologies.slice(3).map((tech, index) => (
           <div
             key={tech}
-            className="rounded-md border px-4 py-3 font-mono text-sm"
+            className="rounded-md border px-4 py-1 font-mono text-base"
           >
             {tech}
           </div>
