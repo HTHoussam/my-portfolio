@@ -24,17 +24,11 @@ const ContactMe = () => {
       email: "",
       message: "",
     },
+    mode: "onChange",
     resolver: zodResolver(contactMeSchema),
   });
   async function onSubmit(data: ContactMeSchemaType) {
-    console.log("with on submit--->", data);
     await emailme(data);
-    // await fetch("/api/email", {
-    //   body: {
-    //     ...data,
-    //   },
-    //   method: "POST",
-    // });
   }
 
   return (
@@ -47,7 +41,6 @@ const ContactMe = () => {
           onSubmit={form.handleSubmit(onSubmit, (error) => {
             console.log("error", error);
           })}
-          // action={emailme}
         >
           <div className="flex flex-col w-full items-center">
             <div className="grid grid-cols-1 gap-4 lg:gap-8 w-full max-w-2xl">

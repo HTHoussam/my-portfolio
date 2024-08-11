@@ -10,7 +10,7 @@ export default function Home() {
       {/* header */}
       <Header />
       {/* main content */}
-      <div className="w-full flex-1 flex flex-col justify-center text-center gap-12 py-12 px-28">
+      <div className="w-full max-w-7xl flex-1 flex flex-col justify-center text-center gap-12 py-12 ">
         <DescriptionHero />
         <ExperiencesSection />
         <SkillsSection />
@@ -19,3 +19,4 @@ export default function Home() {
     </main>
   );
 }
+

@@ -20,7 +20,7 @@ const Header = () => {
     },
   ];
   return (
-    <div className="flex justify-between p-2 w-full">
+    <div className="flex max-w-7xl justify-between p-2 w-full">
       <div>image</div>
       <nav className="flex flex-row text-xl text-secondary-foreground gap-8">
         {links.map(({ name, href }) => (

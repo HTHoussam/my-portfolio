@@ -61,7 +61,7 @@ export const EXPERIENCES_LIST: Experience[] = [
     companyName: "Freelance",
     startDate: "Oct 2019",
     role: "Full-Stack Developer",
-    endDate: "Sep 2021",
+    endDate: "Nov 2021",
     description:
       "Maintained scalable Node.js server-side applications, achieving a 15% reduction in response times and enhancing overall performance. Executed the design and implementation of RESTful APIs, ensuring seamless operations and boosting productivity for end-users Integrated MongoDB to manage data effectively, achieving streamlined operations and ensuring a high level of data integrity. Conducted rigorous testing, achieving a 20% increase in system stability and a 15% improvement in scalability for a crucial application Debugged 3+existing projects and software modules.",
     technologies: [
