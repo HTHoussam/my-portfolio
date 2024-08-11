@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const Header = () => {
@@ -34,7 +35,24 @@ const Header = () => {
           </Link>
         ))}
       </nav>
-      <div>Navigation here </div>
+      <div className="flex flex-row gap-4">
+        <Link href={"https://github.com/HTHoussam"}>
+          <Image
+            src="/assets/imgs/github-icon.png"
+            width={30}
+            height={30}
+            alt="github-icon"
+          />
+        </Link>
+        <Link href={"https://www.linkedin.com/in/habbathoussam/"}>
+          <Image
+            src="/assets/imgs/linkedin-icon.png"
+            width={30}
+            height={30}
+            alt="linkedin-icon"
+          />
+        </Link>
+      </div>
     </div>
   );
 };
