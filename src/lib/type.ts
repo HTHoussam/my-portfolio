@@ -2,6 +2,7 @@ export interface Skill {
   name: string;
   level: number;
   image: string;
+  rating: number;
 }
 export interface Experience {
   companyName: string;

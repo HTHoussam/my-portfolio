@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { SKILL_LIST } from "@/lib/constant";
 import Image from "next/image";
+import SkillsChart from "./skills-chart";
 const SkillsSection = () => {
   return (
     <div id="skills" className="flex flex-col mt-8 ">
@@ -34,7 +35,9 @@ const SkillsSection = () => {
         </div>
         <div className="flex-1">
           <h6 className="text-2xl font-semibold mb-4">Main skill set 🚀</h6>
-          <div>chart here </div>
+          <div>
+            <SkillsChart />
+          </div>
         </div>
       </div>
     </div>

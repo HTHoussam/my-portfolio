@@ -1,16 +1,61 @@
 import { Experience, Skill } from "./type";
 
 export const SKILL_LIST: Skill[] = [
-  { name: "HTML", level: 3, image: "/assets/imgs/stacks/graphql.png" },
-  { name: "CSS", level: 3, image: "/assets/imgs/stacks/graphql.png" },
-  { name: "JavaScript", level: 3, image: "/assets/imgs/stacks/javascript.png" },
-  { name: "Typescript", level: 3, image: "/assets/imgs/stacks/typescript.png" },
-  { name: "React", level: 2, image: "/assets/imgs/stacks/reactjs.png" },
-
-  { name: "Node.js", level: 2, image: "/assets/imgs/stacks/redux.png" },
-  { name: "Express.js", level: 2, image: "/assets/imgs/stacks/prisma.png" },
-  { name: "PHP", level: 2, image: "/assets/imgs/stacks/php.png" },
-  { name: "Graphql.js", level: 2, image: "/assets/imgs/stacks/graphql.png" },
+  {
+    name: "HTML",
+    level: 3,
+    image: "/assets/imgs/stacks/graphql.png",
+    rating: 9,
+  },
+  {
+    name: "CSS",
+    level: 3,
+    image: "/assets/imgs/stacks/graphql.png",
+    rating: 8,
+  },
+  {
+    name: "JavaScript",
+    level: 3,
+    image: "/assets/imgs/stacks/javascript.png",
+    rating: 8,
+  },
+  {
+    name: "Typescript",
+    level: 3,
+    image: "/assets/imgs/stacks/typescript.png",
+    rating: 8.5,
+  },
+  {
+    name: "React",
+    level: 2,
+    image: "/assets/imgs/stacks/reactjs.png",
+    rating: 9,
+  },
+  {
+    name: "Next.js",
+    level: 2,
+    image: "/assets/imgs/stacks/reactjs.png",
+    rating: 7.5,
+  },
+  {
+    name: "Node.js",
+    level: 2,
+    image: "/assets/imgs/stacks/redux.png",
+    rating: 7.5,
+  },
+  {
+    name: "Express.js",
+    level: 2,
+    image: "/assets/imgs/stacks/prisma.png",
+    rating: 7,
+  },
+  { name: "PHP", level: 2, image: "/assets/imgs/stacks/php.png", rating: 5.75 },
+  {
+    name: "Graphql.js",
+    level: 2,
+    image: "/assets/imgs/stacks/graphql.png",
+    rating: 6,
+  },
 ];
 
 export const EXPERIENCES_LIST: Experience[] = [
