@@ -1,4 +1,5 @@
 'use client';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { MenuIcon, XIcon } from 'lucide-react';
@@ -29,9 +30,10 @@ const Header = () => {
 	];
 	return (
 		<div className='flex items-start justify-between max-w-7xl p-4 mx-auto w-full'>
-			<div className='flex items-center'>
-				<Image src='/assets/imgs/logo.png' width={40} height={40} alt='logo' />
-			</div>
+			<Avatar>
+				<AvatarImage src='/assets/imgs/me.png' alt='@houssam_ht' />
+				<AvatarFallback>HH</AvatarFallback>
+			</Avatar>
 
 			{/* Desktop Navigation */}
 			<nav className='hidden md:flex flex-row text-xl text-secondary-foreground gap-8'>

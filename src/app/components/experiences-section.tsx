@@ -29,7 +29,7 @@ const ExperiencesSection = () => {
 											{startDate} - {endDate}
 										</p>
 									</div>
-									<p className='text-sm md:text-base font-semibold text-justify text-primary-foreground'>
+									<p className='text-sm font-semibold text-justify text-primary-foreground'>
 										{description}
 									</p>
 									<div className='mt-auto flex flex-col gap-2'>
