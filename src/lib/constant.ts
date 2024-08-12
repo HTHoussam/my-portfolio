@@ -4,13 +4,13 @@ export const SKILL_LIST: Skill[] = [
   {
     name: "HTML",
     level: 3,
-    image: "/assets/imgs/stacks/graphql.png",
+    image: "/assets/imgs/stacks/html.png",
     rating: 9,
   },
   {
     name: "CSS",
     level: 3,
-    image: "/assets/imgs/stacks/graphql.png",
+    image: "/assets/imgs/stacks/css.png",
     rating: 8,
   },
   {
@@ -34,19 +34,19 @@ export const SKILL_LIST: Skill[] = [
   {
     name: "Next.js",
     level: 2,
-    image: "/assets/imgs/stacks/reactjs.png",
+    image: "/assets/imgs/stacks/nextjs.png",
     rating: 7.5,
   },
   {
     name: "Node.js",
     level: 2,
-    image: "/assets/imgs/stacks/redux.png",
+    image: "/assets/imgs/stacks/nodejs.png",
     rating: 7.5,
   },
   {
     name: "Express.js",
     level: 2,
-    image: "/assets/imgs/stacks/prisma.png",
+    image: "/assets/imgs/stacks/expressjs.png",
     rating: 7,
   },
   { name: "PHP", level: 2, image: "/assets/imgs/stacks/php.png", rating: 5.75 },
