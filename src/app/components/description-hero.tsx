@@ -45,25 +45,16 @@ const DescriptionHero = () => {
         </div>
         <p className="text-center lg:text-left my-4">
           P.S. this website is open-source and available on{" "}
-          <a href="https://github.com" className="text-blue-400 underline">
+          <a
+            href="https://github.com/HTHoussam/my-portfolio"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-400 underline"
+          >
             Github
           </a>
           .
         </p>
-        <div className="flex flex-col sm:flex-row sm:justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-          <a
-            href="#contact"
-            className="text-white py-2 px-4 bg-blue-500 rounded transition text-center"
-          >
-            Get in touch
-          </a>
-          <a
-            href="#read-more"
-            className="text-white py-2 px-4 border border-white rounded hover:bg-white hover:text-black transition text-center"
-          >
-            Read more →
-          </a>
-        </div>
       </div>
       <div className="lg:flex-[1/2] mt-8 lg:mt-0">
         <Image

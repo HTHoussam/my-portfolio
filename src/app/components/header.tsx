@@ -105,9 +105,9 @@ const Header = () => {
               ))}
             </nav>
             <div className="flex flex-row gap-4 mt-6">
-              <Link
-                target="_blank"
+              <a
                 rel="noopener noreferrer"
+                target="_blank"
                 href={"https://github.com/HTHoussam"}
               >
                 <Image
@@ -116,10 +116,10 @@ const Header = () => {
                   height={30}
                   alt="github-icon"
                 />
-              </Link>
-              <Link
-                target="_blank"
+              </a>
+              <a
                 rel="noopener noreferrer"
+                target="_blank"
                 href={"https://www.linkedin.com/in/habbathoussam/"}
               >
                 <Image
@@ -128,7 +128,7 @@ const Header = () => {
                   height={30}
                   alt="linkedin-icon"
                 />
-              </Link>
+              </a>
             </div>
           </SheetContent>
         </Sheet>
