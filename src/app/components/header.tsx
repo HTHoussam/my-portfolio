@@ -1,16 +1,11 @@
-"use client";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { MenuIcon, XIcon } from "lucide-react";
-import Image from "next/image";
+import { NavBarLink, SocialLinkType } from "@/lib/types";
 import Link from "next/link";
-import { useState } from "react";
+import MobileNavSheet from "./core/mobile-nav-sheet";
+import SocialLink from "./core/social-link";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const links: { name: string; href: string }[] = [
+  const navBarLinks: NavBarLink[] = [
     {
       name: "Who Am I",
       href: "#whoami",
@@ -28,6 +23,18 @@ const Header = () => {
       href: "#message__me",
     },
   ];
+  const socialLinks: SocialLinkType[] = [
+    {
+      href: "https://github.com/HTHoussam",
+      iconSrc: "/assets/imgs/github-icon.png",
+      alt: "github-icon",
+    },
+    {
+      href: "https://www.linkedin.com/in/habbathoussam/",
+      iconSrc: "/assets/imgs/linkedin-icon.png",
+      alt: "linkedin-icon",
+    },
+  ];
   return (
     <div className="flex items-start justify-between max-w-7xl p-4 mx-auto w-full">
       <Avatar>
@@ -37,7 +44,7 @@ const Header = () => {
 
       {/* Desktop Navigation */}
       <nav className="hidden md:flex flex-row text-xl text-secondary-foreground gap-8">
-        {links.map(({ name, href }) => (
+        {navBarLinks.map(({ name, href }) => (
           <Link
             key={name}
             className="pb-4 no-underline relative group capitalize hover:text-muted-foreground transition-all duration-300"
@@ -50,88 +57,14 @@ const Header = () => {
       </nav>
 
       <div className="hidden md:flex flex-row gap-4">
-        <Link href={"https://github.com/HTHoussam"}>
-          <Image
-            src="/assets/imgs/github-icon.png"
-            width={30}
-            height={30}
-            alt="github-icon"
-          />
-        </Link>
-        <Link href={"https://www.linkedin.com/in/habbathoussam/"}>
-          <Image
-            src="/assets/imgs/linkedin-icon.png"
-            width={30}
-            height={30}
-            alt="linkedin-icon"
-          />
-        </Link>
+        {socialLinks.map(({ href, iconSrc, alt }) => (
+          <SocialLink key={href} href={href} iconSrc={iconSrc} alt={alt} />
+        ))}
       </div>
 
       {/* Mobile Navigation */}
       <div className="flex md:hidden">
-        <Sheet open={isOpen} onOpenChange={setIsOpen}>
-          <SheetTrigger asChild>
-            <Button variant="ghost" className="p-0">
-              <MenuIcon className="w-6 h-6" />
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="right" className="flex bg-slate-800 flex-col p-6">
-            <div className="flex justify-between items-center mb-8">
-              <Image
-                src="/assets/imgs/logo.png"
-                width={30}
-                height={30}
-                alt="logo"
-              />
-              <Button
-                variant="ghost"
-                className="p-0"
-                onClick={() => setIsOpen(false)}
-              >
-                <XIcon className="w-6 h-6" />
-              </Button>
-            </div>
-            <nav className="flex flex-col space-y-6 text-lg text-secondary-foreground">
-              {links.map(({ name, href }) => (
-                <Link
-                  key={name}
-                  className="no-underline capitalize hover:text-muted-foreground transition-all duration-300"
-                  href={href}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {name}
-                </Link>
-              ))}
-            </nav>
-            <div className="flex flex-row gap-4 mt-6">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href={"https://github.com/HTHoussam"}
-              >
-                <Image
-                  src="/assets/imgs/github-icon.png"
-                  width={30}
-                  height={30}
-                  alt="github-icon"
-                />
-              </a>
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href={"https://www.linkedin.com/in/habbathoussam/"}
-              >
-                <Image
-                  src="/assets/imgs/linkedin-icon.png"
-                  width={30}
-                  height={30}
-                  alt="linkedin-icon"
-                />
-              </a>
-            </div>
-          </SheetContent>
-        </Sheet>
+        <MobileNavSheet navBarLinks={navBarLinks} socialLinks={socialLinks} />
       </div>
     </div>
   );

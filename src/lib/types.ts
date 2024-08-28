@@ -19,3 +19,12 @@ export interface ContactMeObject {
   email: string;
   message: string;
 }
+export interface SocialLinkType {
+  alt: string;
+  href: string;
+  iconSrc: string;
+}
+export interface NavBarLink {
+  name: string;
+  href: string;
+}

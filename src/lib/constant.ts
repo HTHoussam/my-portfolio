@@ -1,4 +1,4 @@
-import { Experience, Skill } from "./type";
+import { Experience, Skill } from "./types";
 
 export const SKILL_LIST: Skill[] = [
   {
