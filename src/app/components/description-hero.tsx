@@ -45,7 +45,8 @@ const DescriptionHero = () => {
       </div>
       <div className="lg:flex-[1/2] mt-8 lg:mt-0">
         <Image
-          src="/assets/imgs/mock-img.jpg"
+          priority
+          src="/assets/imgs/me_min.jpg"
           alt="Houssam Habbat"
           height={500}
           className="rounded-lg shadow-lg mx-auto lg:mx-0"
